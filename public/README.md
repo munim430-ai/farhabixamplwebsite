@@ -35,8 +35,6 @@ This repository contains a full static clone of [www.hangeul.com.bd](https://www
 ├── css/                         # Stylesheets
 ├── js/                          # Client-side scripts
 ├── webfonts/                    # Font Awesome font files (woff2, ttf)
-├── build.js                     # Static site build generator
-├── public/                      # Vercel deployment output directory
 ├── vercel.json                  # Vercel deployment & routing configuration
 └── package.json                 # Node package manifest with dev/build scripts
 ```
