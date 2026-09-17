@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/request_consultation.php", "destination": "/request_consultation.html" },
+    { "source": "/b2b-partnership", "destination": "/b2b-partnership.html" },
+    { "source": "/blog.php", "destination": "/blog.html" },
+    { "source": "/blog/korean-language-course-in-dhaka", "destination": "/blog/korean-language-course-in-dhaka.html" },
+    { "source": "/blog/study-in-korea-requirements-bangladesh", "destination": "/blog/study-in-korea-requirements-bangladesh.html" },
+    { "source": "/login.php", "destination": "/login.html" },
+    { "source": "/partner/login.php", "destination": "/partner/login.html" },
+    { "source": "/uni/login.php", "destination": "/uni/login.html" },
+    { "source": "/events_widget.php", "destination": "/events_widget.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    },
+    {
+      "source": "/(imgs|css|js|webfonts)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
